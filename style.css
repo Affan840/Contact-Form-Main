@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
+:root {
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Karla";
+}
+
+.submissionMsg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+  background-color: var(--Grey-900-darker);
+  border-radius: 10px;
+  color: var(--Green-200-lighter);
+  width: max-content;
+  padding: 30px 20px;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.submissionMsg h4 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.submissionMsg p {
+  color: hsl(185, 15%, 69%);
+  font-weight: 400;
+}
+
+span {
+  color: var(--Green-600-medium);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Green-200-lighter);
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: max-content;
+  width: 600px;
+  background-color: var(--White);
+  padding: 30px;
+  border-radius: 10px;
+  gap: 14px;
+}
+
+label {
+  cursor: pointer;
+  color: var(--Grey-900-darker);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input[type="text"]{
+  font-family: "Karla";
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--Grey-900-darker);
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--Grey-500-medium);
+}
+
+input[type="text"]:focus{
+    border: 1px solid var(--Green-600-medium);
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  outline: 2px solid var(--Grey-500-medium);
+  cursor: pointer;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked{
+      outline: 2px solid var(--Green-600-medium);
+    background-color: var(--Green-600-medium);
+}
+
+form .msg {
+  display: none;
+  color: var(--Red);
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.display{
+    display: block !important;
+}
+
+.redborder{
+    border: 1px solid var(--Red) !important;
+}
+
+.redborder {
+  border: 2px solid var(--Red);
+}
+
+form h1 {
+  color: var(--Grey-900-darker);
+}
+
+form .name div div,
+form .email div,
+form .query>div,
+form .message div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+form .name {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+form .name div {
+  width: 100%;
+}
+
+form .query>div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+form .query>div>div{
+    height: 42px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+form .query>div>div>div{
+    border-radius: 6px;
+    border: 1px solid var(--Grey-500-medium);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+} 
+
+form .query>div>div>div:focus-within{
+    border: 1px solid var(--Green-600-medium);
+    background-color: var(--Green-200-lighter);
+}
+
+form .message div textarea {
+  font-family: "Karla";
+  font-size: 16px;
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid var(--Grey-500-medium);
+  background-color: transparent;
+  resize: none;
+}
+
+form .consent div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form .consent div input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  height: 16px;
+  width: 16px;
+  outline: 1px solid var(--Grey-500-medium);
+}
+
+form .consent div input[type="checkbox"]:checked {
+  background-image: url(assets/images/icon-checkbox-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+  outline: none;
+}
+
+form button {
+    cursor: pointer;
+  font-family: "Karla";
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--Green-600-medium);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 620px) {
+    form{
+        margin: 10px 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+        width: 400px;
+    }
+    .name{
+        flex-direction: column;
+    }
+    .query>div{
+    }
+    
+    form .query>div>div{
+    flex-direction: column;
+    height: auto;
+}
+}
+
+@media (max-width: 450px) {
+    .submissionMsg{
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    width: 310px;
+    height: 200px;
+    opacity: 0;
+    z-index: 9;
+    }
+    main{
+        height: 100%;
+        width: 100vw;
+    }
+
+    input[type="text"] {
+    padding: 6px;
+}
+
+    form{
+        width: 300px;
+        padding: 15px;
+    }
+
+    form .name {
+    gap: 5px;
+    }
+
+    form .msg {
+    margin-top: 2px;
+}
+
+    form .query>div>div>div {
+        padding: 7px 12px;
+    }
+
+    form button{
+        padding: 7px;
+    }
+
+
+
+    form .message div textarea {
+  height: 120px;
+}
+}
