@@ -13,10 +13,10 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 ### Screenshot
 
 ## Desktop
-![](./Final_Desktop.png)
+![](./Final_Desktop1.png)
 
 ## Mobile
-![](./Final_Mobile.png)
+![](./Final_Mobile1.png)
 
 
 ### Links
